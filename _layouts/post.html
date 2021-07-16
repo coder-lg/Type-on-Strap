@@ -37,6 +37,21 @@ layout: default
 {% include blog/post_nav.html %}
 {% endif %}
 
+<!--Lyket-->
+<div class="lyket">
+<style type="text/css">
+div.lyket div.like div.clap div.upvote {
+    font-size: 100%;
+    font-family: source-sans-pro;
+    font-weight: normal;
+    background-color: #83e2ff
+}
+</style>
+{% if site.lyket.apiKey %} {% include social/lyket/lyket-api.html %} {% endif %}
+<div class="like">{% if site.lyket.like.template %} {% include social/lyket/lyket-like.html %} {% endif %}</div>
+<div class="clap">{% if site.lyket.clap.template %} {% include social/lyket/lyket-clap.html %} {% endif %}</div>
+<div class="updown">{% if site.lyket.updown %} {% include social/lyket/lyket-updown.html %} {% endif %}</div>
+</div>
 <!--Utterances-->
 {% if site.comments.utterances.repo and site.comments.utterances.issue-term %} {% include social/utterances.html %} {% endif %}
 

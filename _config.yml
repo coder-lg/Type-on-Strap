@@ -36,6 +36,27 @@ comments:
     repo:                                               # your public comments repository (e.g. owner/repo)
     issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
 
+# Lyket is a set of widgets that add like, upvote and Medium-style clap buttons via HTML, React and APIs
+# This config contains Lyket's all three widgets. 
+# For more info, visit https://app.lyket.dev and sign up with your email.
+# Then, add your website and add your account's API key at the apiKey field. 
+# For more info on the templates, visit https://lyket.dev/docs/html
+lyket:
+  apiKey: 935a2ae7d6376930cbd7acf205ca19                                              # Apply your account's API key to activate Lyket.
+  namespace: test                                           # Your namespace. Use something like "blog" without double quotes
+  name: gitpod                                                # Use anything.
+  
+  # Now starts the templates of Lyket
+  like:
+    template: twitter                                          # The template. Use something like `twitter` to add Twitter's like button.
+
+  clap: 
+    template: default                                          # Use something like `medium` for Medium's claps
+
+  updown:
+    template: chevron                                          # Use something like `reddit` to add Reddit-like upvotes.
+  # Lyket is done
+  
 # PAGINATION
 paginate: 5
 paginate_path: "/blog/page:num"
