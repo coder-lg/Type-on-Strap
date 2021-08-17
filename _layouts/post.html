@@ -47,6 +47,12 @@ layout: default
 {% if site.comments.disqus_shortname or site.theme_settings.disqus_shortname or site.disqus_shortname %}
 {% include social/disqus.html %}{% endif %}
 
+
+{% if site.comments.lyket.apiKey %} {% include social/lyket/api.html %} {% endif %}
+{% if site.comments.lyket.like.template and site.comments.lyket.like.namespace and site.comments.lyket.like.id %} {% include social/lyket/like.html %} {% endif %}
+{% if site.comments.lyket.updown.template and site.comments.lyket.updown.namespace and site.comments.lyket.updown.id %} {% include social/lyket/updown.html %} {% endif %}
+{% if site.comments.lyket.clap.template and site.comments.lyket.clap.namespace and site.comments.lyket.clap.id %} {% include social/lyket/clap.html %} {% endif %}
+
 <!-- To change color of links in the page -->
 <style>
   header#main {
@@ -54,18 +60,18 @@ layout: default
       background-repeat: no-repeat;
       background-position: center;
   }
-  
+
   {% if page.color %}
   .feature-image a { color: {{ page.color }} !important; }
   div#post-nav a { color: {{ page.color }} !important; }
   footer a { color: {{ page.color }} !important; }
   .site-header nav a:hover {  color: {{ page.color }} !important; }
-  header#main { 
+  header#main {
       background-color: {{ page.color }} !important;
       background-image: url('{{ site.color_image | relative_url }}');
   }
   {% endif %}
-  
+
   {% if page.feature-img %}
   header#main { background-image: url('{{ page.feature-img | relative_url }}'); }
   {% endif %}

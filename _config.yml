@@ -36,6 +36,22 @@ comments:
     repo:                                               # your public comments repository (e.g. owner/repo)
     issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
 
+  lyket:
+    apiKey:
+    like:
+      template:
+      namespace:
+      id:
+    updown:
+      template:
+      namespace:
+      id:
+    clap:
+      template:
+      namespace:
+      id:
+
+
 # PAGINATION
 paginate: 5
 paginate_path: "/blog/page:num"
